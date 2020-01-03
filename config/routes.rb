@@ -1,6 +1,16 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
+      resources :album_artists
+    end
+  end
+  namespace :api do
+    namespace :v1 do
+      resources :albums
+    end
+  end
+  namespace :api do
+    namespace :v1 do
       resources :artists
     end
   end

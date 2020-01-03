@@ -79,3 +79,182 @@ artists = [
 artists.each do |artist|
     Artist.create(artist)
 end
+
+puts "Destroying all albums"
+Album.destroy_all
+
+puts "Making you new albums"
+albums = [
+    {
+        id: 1,
+        name: "Scorpion",
+        year: "2018",
+        playlist: "https://open.spotify.com/embed/album/1ATL5GLyefJaxhQzSPVrLX",
+        image: "/Users/hectorpolanco/Development/mod_three_project/geomusicology-api/app/assets/images/albums/drake-scorpion-album.png",
+        artist_id: 1,
+    }, 
+    {
+        id: 2,
+        name: "If You're Reading This It's Too Late",
+        year: "2015",
+        playlist: "https://open.spotify.com/embed/album/0ptlfJfwGTy0Yvrk14JK1I",
+        image: "/Users/hectorpolanco/Development/mod_three_project/geomusicology-api/app/assets/images/albums/drake-ifyou-album.png",
+        artist_id: 1,
+    }, 
+    {
+        id: 3,
+        name: "Nothing Was The Same",
+        year: "2013",
+        playlist: "https://open.spotify.com/embed/album/5mz0mJxb80gqJIcRf9LGHJ",
+        image: "/Users/hectorpolanco/Development/mod_three_project/geomusicology-api/app/assets/images/albums/drake-nothing-album.png",
+        artist_id: 1,
+    }, 
+    {
+        id: 4,
+        name: "Rap Or Go To The League",
+        year: "2019",
+        playlist: "https://open.spotify.com/embed/album/1BR69wIifGZUSimcuTjWVg",
+        image: "/Users/hectorpolanco/Development/mod_three_project/geomusicology-api/app/assets/images/albums/2chainz-rap-album.png",
+        artist_id: 2,
+    },
+    {
+        id: 5,
+        name: "Collegrove",
+        year: "2016",
+        playlist: "https://open.spotify.com/embed/album/56TQNcSoy3eQpyWtNwQnrD",
+        image: "/Users/hectorpolanco/Development/mod_three_project/geomusicology-api/app/assets/images/albums/2chainz-collegrove-album.png",
+        artist_id: 2,
+    },
+    {
+        id: 6,
+        name: "Based On A T.R.U. Story",
+        year: "2012",
+        playlist: "https://open.spotify.com/embed/album/66PA49HFV9YsfQjUYv3xML",
+        image: "/Users/hectorpolanco/Development/mod_three_project/geomusicology-api/app/assets/images/albums/2chainz-based-album.png",
+        artist_id: 2,
+    },
+    {
+        id: 7,
+        name: "4:44",
+        year: "2017",
+        playlist: "https://open.spotify.com/embed/album/7GoZNNb7Yl74fpk8Z6I2cv",
+        image: "/Users/hectorpolanco/Development/mod_three_project/geomusicology-api/app/assets/images/albums/jayz-444-album.png",
+        artist_id: 3,
+    },
+    {
+        id: 8,
+        name: "Magna Carta: Holy Grail",
+        year: "2013",
+        playlist: "https://open.spotify.com/embed/album/4gbrbyveJFkuLH6B5w93JH",
+        image: "/Users/hectorpolanco/Development/mod_three_project/geomusicology-api/app/assets/images/albums/jayz-magna-album.png",
+        artist_id: 3,
+    },
+    {
+        id: 9,
+        name: "Watch The Throne",
+        year: "2011",
+        playlist: "https://open.spotify.com/embed/album/2P2Xwvh2xWXIZ1OWY9S9o5",
+        image: "/Users/hectorpolanco/Development/mod_three_project/geomusicology-api/app/assets/images/albums/jayz-watch-album.png",
+        artist_id: 3,
+    },
+    {
+        id: 10,
+        name: "Victory Lap",
+        year: "2018",
+        playlist: "https://open.spotify.com/embed/album/6rcbbhcm8Os7EiVRHP9Aef",
+        image: "/Users/hectorpolanco/Development/mod_three_project/geomusicology-api/app/assets/images/albums/nipsey-victory-album.png",
+        artist_id: 4,
+    },
+    {
+        id: 11,
+        name: "Crenshaw",
+        year: "2013",
+        playlist: "https://open.spotify.com/embed/album/1C5gVWv1k7r0LxsrIL8OL8",
+        image: "/Users/hectorpolanco/Development/mod_three_project/geomusicology-api/app/assets/images/albums/nipsey-crenshaw-album.png",
+        artist_id: 4,
+    },
+    {
+        id: 12,
+        name: "Nip Hussle The Great: Vol 1",
+        year: "2013",
+        playlist: "https://open.spotify.com/embed/album/4qG4QOQdwo9nHbMVHfcX3v",
+        image: "/Users/hectorpolanco/Development/mod_three_project/geomusicology-api/app/assets/images/albums/nipsey-thegreat-album.png",
+        artist_id: 4,
+    },
+    {
+        id: 13,
+        name: "The Album About Nothing",
+        year: "2015",
+        playlist: "https://open.spotify.com/embed/album/6aCr3UaB8lM9g6TtFB3qwd",
+        image: "/Users/hectorpolanco/Development/mod_three_project/geomusicology-api/app/assets/images/albums/wale-album-album.png",
+        artist_id: 5,
+    },
+    {
+        id: 14,
+        name: "The Gifted",
+        year: "2013",
+        playlist: "https://open.spotify.com/embed/album/2m1DkB7oqaZu8BzAAUfwlq",
+        image: "/Users/hectorpolanco/Development/mod_three_project/geomusicology-api/app/assets/images/albums/wale-gifted-album.png",
+        artist_id: 5,
+    },
+    {
+        id: 15,
+        name: "Ambition",
+        year: "2011",
+        playlist: "https://open.spotify.com/embed/album/0jCVC8ndYYOooEY2YTO1l6",
+        image: "/Users/hectorpolanco/Development/mod_three_project/geomusicology-api/app/assets/images/albums/wale-ambition-album.png",
+        artist_id: 5,
+    },
+    {
+        id: 16,
+        name: "Kids See Ghosts",
+        year: "2018",
+        playlist: "https://open.spotify.com/embed/album/6pwuKxMUkNg673KETsXPUV",
+        image: "/Users/hectorpolanco/Development/mod_three_project/geomusicology-api/app/assets/images/albums/kanye-ghosts-album.png",
+        artist_id: 6,
+    },
+    {
+        id: 17,
+        name: "MBDTF",
+        year: "2010",
+        playlist: "https://open.spotify.com/embed/album/20r762YmB5HeofjMCiPMLv",
+        image: "/Users/hectorpolanco/Development/mod_three_project/geomusicology-api/app/assets/images/albums/kanye-mbdtf-album.png",
+        artist_id: 6,
+    },
+    {
+        id: 18,
+        name: "Late Registration",
+        year: "2005",
+        playlist: "https://open.spotify.com/embed/album/5ll74bqtkcXlKE7wwkMq4g",
+        image: "/Users/hectorpolanco/Development/mod_three_project/geomusicology-api/app/assets/images/albums/kanye-late-album.png",
+        artist_id: 6,
+    },
+    {
+        id: 19,
+        name: "Fever",
+        year: "2019",
+        playlist: "https://open.spotify.com/embed/album/5WLquTz7nUnsHCj80b6wci",
+        image: "/Users/hectorpolanco/Development/mod_three_project/geomusicology-api/app/assets/images/albums/megan-fever-album.png",
+        artist_id: 7,
+    },
+    {
+        id: 20,
+        name: "Tina Snow",
+        year: "2018",
+        playlist: "https://open.spotify.com/embed/album/26jEIrN7WSAnVQXXUmLRSN",
+        image: "/Users/hectorpolanco/Development/mod_three_project/geomusicology-api/app/assets/images/albums/megan-tina-album.png",
+        artist_id: 7,
+    },
+    {
+        id: 21,
+        name: "Make It Hot",
+        year: "2017",
+        playlist: "https://open.spotify.com/embed/album/1KqDByzl8ka4U4OhcgqLKq",
+        image: "/Users/hectorpolanco/Development/mod_three_project/geomusicology-api/app/assets/images/albums/megan-makeithot-album.png",
+        artist_id: 7,
+    },
+]
+
+albums.each do |album|
+    Album.create(album)
+end
